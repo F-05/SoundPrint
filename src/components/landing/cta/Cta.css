@@ -1,0 +1,114 @@
+.sp-hero {
+  max-width: var(--hero-max-width);
+  margin-inline: auto;
+  padding: 4.5rem var(--page-padding-x) 3.5rem;
+  text-align: center;
+}
+
+.sp-cta-eyebrow {
+  margin-bottom: 1.5rem;
+  color: var(--color-accent);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.sp-cta-title {
+  margin-bottom: 1.25rem;
+  color: var(--color-text);
+  font-size: var(--hero-font-size);
+  font-weight: var(--font-bold);
+  line-height: var(--line-height-tight);
+  letter-spacing: -0.03em;
+  text-align: center;
+}
+
+.sp-cta-title span {
+  color: var(--color-accent);
+}
+
+.sp-cta-desc {
+  max-width: var(--copy-max-width);
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  color: var(--color-text-muted);
+  font-size: var(--body-font-size);
+  line-height: var(--line-height-body);
+}
+
+.sp-cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  padding: 0.875rem 1.75rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-accent);
+  color: var(--color-accent-contrast);
+  font-size: var(--small-font-size);
+  font-weight: var(--font-bold);
+  letter-spacing: 0.03em;
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
+}
+
+.sp-cta-button:hover {
+  background: var(--color-accent-hover);
+  transform: translateY(-1px);
+}
+
+.sp-cta-button:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 3px;
+}
+
+.sp-cta-button-icon {
+  width: 1rem;
+  height: 1rem;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.sp-disclaimer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  margin-top: 1.5rem;
+  color: var(--color-text-faint);
+  font-size: var(--tiny-font-size);
+}
+
+.sp-disclaimer p {
+  position: relative;
+}
+
+.sp-disclaimer p:not(:last-child)::after {
+  content: "·";
+  margin-left: 0.625rem;
+  color: var(--color-text-faint);
+}
+
+@media screen and (max-width: 768px) {
+  .sp-hero {
+    padding-top: 3.5rem;
+    padding-bottom: 2.5rem;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .sp-hero {
+    padding-inline: var(--page-padding-x);
+  }
+
+  .sp-cta-button {
+    width: 100%;
+  }
+
+  .sp-disclaimer {
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+  }
+}
