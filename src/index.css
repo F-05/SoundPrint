@@ -1,1 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
 @import "tailwindcss";
+
+:root {
+    --header-height: 4.5rem;
+
+    /* Color system */
+    --hue: 0;
+    --sat: 0%;
+    --color-bg: #0e0e0e;
+    --color-surface: #161616;
+    --color-surface-strong: #1d1d1d;
+    --color-text: #ffffff;
+    --color-text-muted: #888888;
+    --color-text-soft: #555555;
+    --color-text-faint: #444444;
+    --color-text-ghost: #333333;
+    --color-border: rgba(255, 255, 255, 0.08);
+    --color-border-soft: rgba(255, 255, 255, 0.07);
+    --color-border-faint: rgba(255, 255, 255, 0.06);
+    --color-accent: #1db954;
+    --color-accent-hover: #1ed760;
+    --color-accent-tint: rgba(29, 185, 84, 0.12);
+    --color-accent-contrast: #000000;
+
+    /* Typography */
+    --body-font: "Poppins", sans-serif;
+    --body-font-size: 1rem;
+    --nav-logo-font-size: 1rem;
+    --small-font-size: 0.875rem;
+    --tiny-font-size: 0.75rem;
+    --hero-font-size: 3.5rem;
+    --stat-font-size: 1.125rem;
+    --line-height-tight: 1.15;
+    --line-height-body: 1.7;
+    --line-height-copy: 1.6;
+    --font-normal: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /* Spacing */
+    --space-1: 0.25rem;
+    --space-2: 0.5rem;
+    --space-3: 0.75rem;
+    --space-4: 1rem;
+    --space-5: 1.25rem;
+    --space-6: 1.5rem;
+    --space-7: 1.75rem;
+    --space-8: 2rem;
+    --space-9: 2.25rem;
+    --space-10: 2.5rem;
+    --space-14: 3.5rem;
+    --space-18: 4.5rem;
+
+    /* Layout */
+    --page-max-width: 85rem;
+    --hero-max-width: 50rem;
+    --copy-max-width: 26rem;
+    --preview-max-width: 35rem;
+    --nav-padding-y: 1.25rem;
+    --page-padding-x: 2rem;
+
+    /* Shape */
+    --radius-sm: 0.5rem;
+    --radius-md: 0.625rem;
+    --radius-pill: 999px;
+
+    /* Effects */
+    --transition-fast: 150ms ease;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body,
+button,
+input,
+textarea {
+    font-family: var(--body-font);
+    font-size: var(--body-font-size);
+}
+
+body {
+    min-width: 320px;
+    background: var(--color-bg);
+    color: var(--color-text);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+#root {
+    min-height: 100vh;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.sp-page {
+    min-height: 100vh;
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+.sp-nav-dot {
+    width: 0.375rem;
+    height: 0.375rem;
+    border-radius: 50%;
+    background: var(--color-accent);
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 992px) {
+    :root {
+        --hero-font-size: 2.75rem;
+        --page-padding-x: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    :root {
+        --header-height: 4rem;
+        --hero-font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    :root {
+        --page-padding-x: 1.25rem;
+        --hero-font-size: 2.25rem;
+        --body-font-size: 0.9375rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    :root {
+        --page-padding-x: 1rem;
+        --hero-font-size: 1.55rem;
+    }
+}
