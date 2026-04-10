@@ -30,7 +30,7 @@
     --small-font-size: 0.875rem;
     --tiny-font-size: 0.75rem;
     --hero-font-size: 3.5rem;
-    --stat-font-size: 1.125rem;
+    --stat-font-size: 1.25rem;
     --line-height-tight: 1.15;
     --line-height-body: 1.7;
     --line-height-copy: 1.6;
@@ -57,7 +57,7 @@
     --page-max-width: 85rem;
     --hero-max-width: 50rem;
     --copy-max-width: 26rem;
-    --preview-max-width: 35rem;
+    --preview-max-width: 45rem;
     --nav-padding-y: 1.25rem;
     --page-padding-x: 2rem;
 

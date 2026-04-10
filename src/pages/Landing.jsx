@@ -1,6 +1,7 @@
 import Header from '../components/landing/header/Header.jsx';
 import Cta from '../components/landing/cta/Cta.jsx';
 import About from '../components/landing/about/About.jsx';
+import Preview from '../components/landing/preview/Preview.jsx';
 import Footer from '../components/landing/footer/Footer.jsx';
 
 export default function Landing() {
@@ -9,6 +10,7 @@ export default function Landing() {
             <Header />
             <Cta />
             <About />
+            <Preview />
             <Footer />
         </>
     );
