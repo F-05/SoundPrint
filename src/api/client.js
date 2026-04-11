@@ -1,7 +1,9 @@
 import { getAccessToken, refreshAccessToken } from '../auth/tokens.js';
 
 export async function spotifyFetch(endpoint, retries = 3) {
-    await refreshAccessToken();
+    await refreshAccessToken(() => {
+        window.location.href = '/';
+    });
     
     const token = getAccessToken();
     if (!token) {
