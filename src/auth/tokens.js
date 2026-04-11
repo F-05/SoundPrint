@@ -33,7 +33,9 @@ export function clearTokens() {
   sessionStorage.removeItem(REFRESH_TOKEN_KEY);
 }
 
-export async function refreshAccessToken(redirectToLogin) {
+export async function refreshAccessToken(redirectToLogin = () => {
+    window.location.href = '/';
+}) {
     if (!isExpired()) {
         return;
     }
