@@ -1,0 +1,182 @@
+.sp-dashboard {
+    min-height: 100vh;
+    padding: var(--space-18) var(--page-padding-x);
+    background: var(--color-bg);
+    color: var(--color-text);
+}
+
+.sp-dashboard-inner {
+    width: min(100%, var(--page-max-width));
+    margin-inline: auto;
+}
+
+.sp-dashboard-kicker {
+    margin-bottom: var(--space-3);
+    color: var(--color-accent);
+    font-size: var(--small-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.sp-dashboard-title {
+    max-width: 46rem;
+    margin-bottom: var(--space-4);
+    color: var(--color-text);
+    font-size: var(--hero-font-size);
+    font-weight: var(--font-bold);
+    line-height: var(--line-height-tight);
+}
+
+.sp-dashboard-copy {
+    max-width: 42rem;
+    margin-bottom: var(--space-8);
+    color: var(--color-text-muted);
+    line-height: var(--line-height-body);
+}
+
+.sp-dashboard-state {
+    color: var(--color-text-muted);
+}
+
+.sp-dashboard-state--error {
+    color: #ff8a8a;
+}
+
+.sp-dashboard-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-3);
+    margin-bottom: var(--space-8);
+}
+
+.sp-dashboard-stat,
+.sp-dashboard-panel {
+    border: 0.5px solid var(--color-border-soft);
+    border-radius: var(--radius-md);
+    background: var(--color-surface);
+}
+
+.sp-dashboard-stat {
+    min-height: 7.5rem;
+    padding: 1.25rem 1.5rem;
+}
+
+.sp-dashboard-stat-label {
+    margin-bottom: var(--space-2);
+    color: var(--color-text-muted);
+    font-size: var(--tiny-font-size);
+}
+
+.sp-dashboard-stat-value {
+    display: block;
+    color: var(--color-text);
+    font-size: 2rem;
+    font-weight: var(--font-semi-bold);
+    line-height: 1;
+}
+
+.sp-dashboard-panel {
+    padding: 1.5rem;
+}
+
+.sp-dashboard-section-title {
+    margin-bottom: var(--space-5);
+    color: var(--color-text);
+    font-size: var(--stat-font-size);
+    font-weight: var(--font-semi-bold);
+}
+
+.sp-dashboard-hours {
+    display: grid;
+    grid-template-columns: repeat(24, minmax(1.5rem, 1fr));
+    gap: var(--space-2);
+    min-height: 12rem;
+    align-items: end;
+    overflow-x: auto;
+    padding-bottom: var(--space-2);
+}
+
+.sp-dashboard-hour {
+    min-width: 1.5rem;
+    display: grid;
+    grid-template-rows: 10rem auto;
+    gap: var(--space-2);
+    align-items: end;
+}
+
+.sp-dashboard-hour-bar {
+    width: 100%;
+    min-height: 0.5rem;
+    align-self: end;
+    border-radius: 0.25rem;
+    background: var(--color-surface-strong);
+}
+
+.sp-dashboard-hour-bar--active {
+    background: var(--color-accent);
+}
+
+.sp-dashboard-hour-bar--0 {
+    height: 0.5rem;
+}
+
+.sp-dashboard-hour-bar--1 {
+    height: 1rem;
+}
+
+.sp-dashboard-hour-bar--2 {
+    height: 2rem;
+}
+
+.sp-dashboard-hour-bar--3 {
+    height: 3rem;
+}
+
+.sp-dashboard-hour-bar--4 {
+    height: 4rem;
+}
+
+.sp-dashboard-hour-bar--5 {
+    height: 5rem;
+}
+
+.sp-dashboard-hour-bar--6 {
+    height: 6rem;
+}
+
+.sp-dashboard-hour-bar--7 {
+    height: 7rem;
+}
+
+.sp-dashboard-hour-bar--8 {
+    height: 8rem;
+}
+
+.sp-dashboard-hour-bar--9 {
+    height: 9rem;
+}
+
+.sp-dashboard-hour-bar--10 {
+    height: 10rem;
+}
+
+.sp-dashboard-hour-label {
+    color: var(--color-text-muted);
+    font-size: 0.7rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+    .sp-dashboard-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .sp-dashboard {
+        padding-top: var(--space-14);
+    }
+
+    .sp-dashboard-panel {
+        padding: var(--space-5);
+    }
+}
